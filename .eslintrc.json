@@ -1,0 +1,19 @@
+{
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["node"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "node/no-unpublished-require": "off",
+    "no-await-in-loop": "warn"
+  },
+  "ignorePatterns": ["node_modules/", "logs/", "sessions/"]
+}

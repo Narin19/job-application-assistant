@@ -1,0 +1,42 @@
+{
+  "name": "job-application-assistant",
+  "version": "1.0.0",
+  "description": "Playwright-based assistant that monitors job boards (Naukri, LinkedIn, Indeed) for matching roles and helps with straightforward application flows, pausing for manual review when extra questions appear.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "monitor": "node src/index.js --mode=monitor",
+    "apply": "node src/index.js --mode=apply",
+    "login:naukri": "node src/index.js --mode=login --site=naukri",
+    "login:linkedin": "node src/index.js --mode=login --site=linkedin",
+    "login:indeed": "node src/index.js --mode=login --site=indeed",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "job-search"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.5",
+    "p-retry": "^6.2.0",
+    "playwright": "^1.62.1",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
